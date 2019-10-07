@@ -7,3 +7,5 @@ Evaluation in folder "lectures/l3_picoVersat".
 Evaluation in folder "lectures/l4_fpgas".
 ## Lesson 5
 Evaluation in folder "lectures/l5_ecompo_intro".
+## Lesson 6
+Evaluation in folder "lectures/l6_design_choices/AdderN/verilog/src"
