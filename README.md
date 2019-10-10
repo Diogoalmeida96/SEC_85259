@@ -9,3 +9,6 @@ Evaluation in folder "lectures/l4_fpgas".
 Evaluation in folder "lectures/l5_ecompo_intro".
 ## Lesson 6
 Evaluation in folder "lectures/l6_design_choices/AdderN/verilog/src"
+## Lesson 7
+Evaluation in folder "lectures/l7_adders_i/fullAdder/
+"
