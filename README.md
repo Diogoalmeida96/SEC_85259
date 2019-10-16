@@ -11,4 +11,5 @@ Evaluation in folder "lectures/l5_ecompo_intro".
 Evaluation in folder "lectures/l6_design_choices/AdderN/verilog/src"
 ## Lesson 7
 Evaluation in folder "lectures/l7_adders_i/fullAdder/
-"
+## Lesson 8
+Evaluation in folder "lectures/l8_adders_ii/CLA/
