@@ -13,3 +13,5 @@ Evaluation in folder "lectures/l6_design_choices/AdderN/verilog/src"
 Evaluation in folder "lectures/l7_adders_i/fullAdder/
 ## Lesson 8
 Evaluation in folder "lectures/l8_adders_ii/CLA/
+## Lesson 9
+Evaluation in folder "lectures/l9_mults/unsigned_multiplier/"
