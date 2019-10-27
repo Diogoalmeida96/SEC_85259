@@ -15,3 +15,7 @@ Evaluation in folder "lectures/l7_adders_i/fullAdder/
 Evaluation in folder "lectures/l8_adders_ii/CLA/
 ## Lesson 9
 Evaluation in folder "lectures/l9_mults/unsigned_multiplier/"
+## Lesson 10 
+Evaluation in folder "lectures/l11_mults_ii/src/"
+## Lesson 11
+Evaluation in folder "lectures/l12_booth_mults/src/"
