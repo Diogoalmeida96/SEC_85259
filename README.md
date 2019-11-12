@@ -19,3 +19,5 @@ Evaluation in folder "lectures/l9_mults/unsigned_multiplier/"
 Evaluation in folder "lectures/l11_mults_ii/src/"
 ## Lesson 11
 Evaluation in folder "lectures/l12_booth_mults/src/"
+## Lesson 16
+Evaluation in folder "lectures/l16_mem_hist/ROM/"
