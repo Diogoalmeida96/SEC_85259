@@ -1,0 +1,7 @@
+
+C = (cd*cc)/(cd+cc) = 19 fF 
+
+Vinf = [(cd-cc)/(cd+cc)]*(VDD/2) = 0.8 V
+
+ts = RC ln [(VDD/2-Vinf)/(VDD/2-deltaV-Vinf)] => R = 163.5 ohm.
+

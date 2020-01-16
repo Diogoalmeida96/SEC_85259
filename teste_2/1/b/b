@@ -1,0 +1,16 @@
+mem size c= 32kB
+word size = 8b
+
+number of words = 32kB/8b = 32k words 
+
+memory size chip = 2^10 = 1KB
+word size chip = 8 = 8-bit ram module
+
+number of chips = 32 k / 1 k = 32 chips
+
+address bits
+
+select each chip => 32 chips = 2⁵ therefore 5 bits are required
+
+10 bits are required to address each chip
+

@@ -1,0 +1,6 @@
+2^12 rows 
+refresh duration = #rows x trow_acess
+         = 2^12 x 50ps = 204 nS
+
+refresh overhead = 204 nS/80us * 100 = 0.255 %
+

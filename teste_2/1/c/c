@@ -1,0 +1,8 @@
+16kB/1kB = 16 mem chips de a); 
+de forma a obter words de 32 bits são necesarios 4 mem chips em 4 linhas
+para endereçar o modulo é necessário
+2 bits para enderaçar as linhas (4)
+2 bit para selecionar os modulos nas linhas (4) 
+e 10 bits para endereçar dentro de cada modulo 
+ou seja 14 bits no total
+

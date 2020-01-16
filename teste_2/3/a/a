@@ -1,0 +1,15 @@
+
+#addres bits = 29
+
+#offset_bits = log2(32 B/32) = 3
+
+#byte select -> word size = 4 B -> 2 bits byte select
+
+# index = 2^3*2^10 / 2^5 / 2^1 = 2 ^7 = 7 index bits
+
+# tag = address_bits - offset_bits- byte_select_bits = 29 - 3 - 2 - 7 = 17
+
+tag = 17 bits
+index = 7 bits
+offset = 3 bits
+byte select = 2 bits
