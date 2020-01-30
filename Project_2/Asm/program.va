@@ -1,0 +1,196 @@
+# - NOPs are present at each at the start of each routine for testing purposes and for ease of editing, this not affect the program performance. Can be removed.
+
+
+#R1 - speed to write
+#R2 - last speed
+#R3 - debounce var
+#R4 - push button state
+
+#R5 - interation step var
+
+#R6 - btn 1 pushed
+#R7 - btn 2 pushed
+#R8 - btn 1 alt pushed
+#R9 - btn 2 alt pushed
+
+#R10 - general purpose
+
+#R11 - max compare loop
+
+#R12 - sound to write
+#R13 - last sound
+
+#R14 - max compare snd
+
+initializations nop
+    ldi 0
+    wrw R1
+    ldi 0
+    wrw R2
+    ldi 0
+    wrw R4
+    ldi 0
+    wrw R12
+    ldi 0
+    wrw R13
+
+#ldi debouncetm
+#wrw R3
+
+    ldi 1
+    wrw R5
+
+    ldi 1
+    wrw R6
+    ldi 2
+    wrw R7
+    ldi 5
+    wrw R8
+    ldi 6
+    wrw R9
+    ldi 7
+    wrw R11
+    ldi 15
+    wrw R14
+
+
+    ldi 0
+    wrw LOOP_BASE
+    ldi 0
+    wrw SND_BASE
+
+# main loop
+mainloop nop
+    ldi 0xFFFFF
+    wrw R3
+    rdw PUSH_BASE 
+#store push button state on r4
+    wrw R4 
+
+#CHECK MAIN BUTTONS
+# btn1  test routine
+btn1test nop 
+    rdw R4     
+    sub R6 
+    bneqi btn2test
+
+# btn 1 pressed routine
+btn1pressed nop
+    rdw R2          
+    beqi dontupdate1
+    rdw R2
+    sub R5
+    wrw R1
+    ldi 0
+    beqi speedupdate
+
+dontupdate1 nop
+    ldi 0
+    beqi debounceLoop
+
+
+# btn2  test routine
+btn2test nop 
+    rdw R4     
+    sub R7 
+    bneqi btn1alttest
+
+# btn 2 pressed routine
+btn2pressed nop
+    rdw R2
+    sub R11           
+    beqi dontupdate2
+    rdw R2
+    addi 1
+    wrw R1
+    ldi 0
+    beqi speedupdate
+
+dontupdate2 nop
+    ldi 0
+    beqi debounceLoop
+
+
+#========BUTTON COMBOS========
+
+
+# btn1alt  test routine
+btn1alttest nop 
+    rdw R4     
+    sub R8 
+    bneqi btn2alttest
+
+# btn 1alt pressed routine
+btn1altpressed nop
+    rdw R13
+    sub R14           
+    beqi dontupdate1alt
+    rdw R13
+    addi 1
+    wrw R12
+    ldi 0
+    beqi soundupdate
+
+dontupdate1alt nop
+    ldi 0
+    beqi debounceLoop
+
+# btn2alt  test routine
+btn2alttest nop 
+    rdw R4     
+    sub R9 
+    bneqi debounceLoop
+
+# btn 2alt pressed routine
+btn2altpressed nop
+    rdw R13           
+    beqi debounceLoop
+    rdw R13
+    sub R5
+    wrw R12
+    ldi 0
+    beqi soundupdate
+
+dontupdate2alt nop
+    ldi 0
+    beqi debounceLoop
+
+
+
+#update speed
+speedupdate nop
+    rdw R1
+    sub R2
+    beqi debounceLoop
+    rdw R1
+    wrw LOOP_BASE
+#update old speed
+noupdate nop
+    rdw R1
+    wrw R2
+
+
+#update sound
+soundupdate nop
+    rdw R12
+    sub R13
+    beqi debounceLoop
+    rdw R12
+    wrw SND_BASE
+#update old speed
+noupdatesnd nop
+    rdw R12
+    wrw R13
+
+#rdw R3
+# debounce loop
+debounceLoop nop
+    rdw R3
+    sub R5
+    wrw R3
+    rdw R3 
+    bneqi debounceLoop 
+    ldi 0
+    beqi mainloop
+
+
